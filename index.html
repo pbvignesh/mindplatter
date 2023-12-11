@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Already Read Chapters</h1>
+            <p ></p>
+        </div>
+        <script>
+            let chapters = Array.from(Array(205).keys());
+            let alreadyReadChapters = [98, 30, 67, 7, 19, 43, 73, 106, 203, 202, 77, 76, 100, 34, 108, 137, 54, 29];
+
+            function getRandomElement(arr) {
+                const randomIndex = Math.floor(Math.random() * arr.length);
+                return arr[randomIndex];
+            }
+
+            let randomChapter;
+            let todaysFiveChapters = [];
+            for (let i = 0; i < 5; i++) {
+                randomChapter = getRandomElement(chapters);
+                alreadyReadChapters.push(randomChapter);
+                todaysFiveChapters.push(randomChapter);
+            }
+            console.log(alreadyReadChapters);
+            console.log('Todays Five Chapters');
+            console.log(todaysFiveChapters);
+        </script>
+    </body>
+</html>
